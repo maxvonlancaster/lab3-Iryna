@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navigation">
+        <div>
+            <img src="images/logo.png" width="50px" height="auto">
+        </div>
+
+        <div class="navig">
+            <button>All</button>
+            <button>Google</button>
+            <button>Samsung</button>
+            <button onclick="openCartModal()">Корзина</button>
+            <button id="gistogramButton" onclick="window.location.href='Gistogram.html'">Гістограми</button>
+        </div>
+    </div>
+    <div id="advertisement">
+        <div class="modal-content">
+            <h2>Реклама</h2>
+            <p>Контент</p>
+            <button class="dismiss-button" onclick="closeAdvertisement()">Закрити</button>
+        </div>
+    </div>
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCartModal()">&times;</span>
+            <h2>Корзина</h2>
+            <div id="cartContent"></div>
+            <div id="totalPrice"></div>
+            <button onclick="clearCart()">Remove</button>
+        </div>
+    </div>
+
+    <div id="cardsContainer">
+    </div>
+    <script src='Cart.js'></script>
+    <script src='Advert.js'></script>
+    <script src='Category.js'></script>
+</body>
+</html>
